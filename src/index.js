@@ -1,3 +1,3 @@
 import initialLoad from './pageLoad.js';
 
-initialLoad('Samuel');
+initialLoad('Samuelisch, BEEFICON IS LOADING FINALLY');

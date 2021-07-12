@@ -11,7 +11,8 @@ module.exports = {
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Restaurant Page',
+            template: './src/index.html',
+            favicon: './src/images/beeficon.ico',
         }),
     ],
     output: {
