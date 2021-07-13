@@ -15,6 +15,14 @@ module.exports = {
             favicon: './src/images/beeficon.ico',
         }),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
