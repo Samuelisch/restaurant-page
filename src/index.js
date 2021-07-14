@@ -1,13 +1,9 @@
-import loadPage from './pageLoad.js';
+import loadHomePage from './homePage.js';
 import "./style.css";
-import loadImage from './images/default.png';
 
-loadPage('Samuel'); //console logs 'Hello, Samuel!'
-
-//template to create elements and put to content
-//create selector for content div, insert append created elements to mainContent - index page
 const mainContent = document.getElementById('content');
 
+//header for all pages
 const header = document.createElement('header')
 header.innerHTML = `
     <nav id="nav-bar">
@@ -21,9 +17,7 @@ header.innerHTML = `
 //append to mainContent
 mainContent.appendChild(header);
 
-//append company image to mainContent
-const sideLogo = new Image();
-sideLogo.className = 'main-image';
-sideLogo.src = loadImage;
+loadHomePage(); //initiates main index.js page
 
-mainContent.appendChild(sideLogo);
+//template to create elements and put to content
+//create selector for content div, insert append created elements to mainContent - index page
