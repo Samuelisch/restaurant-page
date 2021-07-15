@@ -6,11 +6,15 @@ html {
 body {
 	margin: 0;
 	background: rgb(224, 224, 224);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .container {
+	width: 100vw;
 	max-width: 800px;
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 #nav-bar {
@@ -33,20 +37,21 @@ body {
 	list-style: none;
 	height: 100%;
 	width: 100%;
-}
-
-#nav-links a {
-	color: #5D4038;
-	height: 100%;
-	text-decoration: none;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+}
+
+.tab {
+	background: inherit;
+	border: none;
+	color: #5D4038;
+	height: 100%;
+	font-size: inherit;
 	transition: font-size 0.2s linear;
 }
 
-#nav-links a:hover {
-	font-size: 105%;
+.tab:hover {
+	font-size: 110%;
 }
 
 .main-image {

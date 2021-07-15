@@ -1,7 +1,7 @@
-import loadHomePage from './homePage.js';
+import {loadHomePage, loadMenuPage, loadContactPage} from './homePage.js';
 import "./style.css";
 
-const mainContent = document.getElementById('content');
+const mainContent = document.getElementById('content'); //selector for mainContent
 
 //div element to center of the page, maximum width of 80vh, with padding on top
 const contentContainer = document.createElement('div');
@@ -14,9 +14,9 @@ const navbar = document.createElement('nav');
 navbar.id = 'nav-bar'
 navbar.innerHTML = `
         <ul id="nav-links">
-            <li><a class="home" href="#">Home</a></li>
-            <li><a class="menu" href="#">Menu</a></li>
-            <li><a class="contact" href="#">Contact</a></li>
+            <li><button class="home tab">Home</button></li>
+            <li><button class="menu tab">Menu</button></li>
+            <li><button class="contact tab">Contact</button></li>
         </ul>
 `
 //append to container
@@ -31,3 +31,26 @@ contentContainer.appendChild(changingContainer);
 
 //initial load of homepage.js into module container
 loadHomePage(); //initiates main index.js page
+
+//module to select tabs
+(() => {
+    const navBtns = document.querySelectorAll('.tab');
+
+    function sortBtns(e) {
+        const element = e.target;
+
+        if (element.classList.contains('home')) {
+            loadHomePage();
+        }
+
+        if (element.classList.contains('contact')) {
+            loadContactPage();
+        }
+
+        if (element.classList.contains('menu')) {
+            loadMenuPage();
+        }
+    }
+
+    navBtns.forEach(btn => btn.addEventListener('click', sortBtns));
+})();
