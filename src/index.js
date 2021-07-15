@@ -1,4 +1,4 @@
-import {loadHomePage, loadMenuPage, loadContactPage} from './homePage.js';
+import {loadHomePage, loadMenuPage, loadContactPage} from './modules.js';
 import "./style.css";
 
 const mainContent = document.getElementById('content'); //selector for mainContent
@@ -30,7 +30,7 @@ changingContainer.className = 'module-container';
 contentContainer.appendChild(changingContainer);
 
 //initial load of homepage.js into module container
-loadHomePage(); //initiates main index.js page
+loadContactPage(); //initiates main index.js page
 
 //module to select tabs
 (() => {

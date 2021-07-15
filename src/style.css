@@ -54,10 +54,50 @@ body {
 	font-size: 110%;
 }
 
+/* Homepage */
 .main-image {
 	width: 100%;
 }
 
+/* Contact page */
+#contact {
+	width: 100%;
+}
+
+.form-inner {
+	padding: 20px 80px;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-title {
+	margin: 0;
+	text-align: center;
+}
+
+.form-inner > * {
+	border-radius: 20px;
+}
+
+.form-inner input,
+.form-inner textarea {
+	margin-top: 15px;
+	padding: 15px;
+	border: none;
+	background: rgba(243, 242, 242, 0.9);
+}
+
+.form-inner button {
+	padding: 10px;
+	margin-top: 20px;
+	border: none;
+	border-bottom: 4px solid rgb(190, 115, 49);
+	background:rgb(226, 129, 45);
+	color: rgb(243, 242, 242);
+	font-size: 1.5rem;
+}
+
+/* Media queries */
 @media (min-width: 400px) {
 	html {
 		font-size: 13px;
