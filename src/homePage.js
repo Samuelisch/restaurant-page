@@ -1,15 +1,15 @@
 import loadImage from './images/default.png';
 //module containing inital page-load, to be exported to index.js
-const loadPage = (name) => {
-    //add icon to shut favicon error up - REMOVE for production environment!
-    const mainContent = document.getElementById('content');
+const loadPage = () => {
+    const container = document.querySelector('.module-container');
 
-    //append company image to mainContent
+    //create new variable that initialises a new image
     const sideLogo = new Image();
     sideLogo.className = 'main-image';
-    sideLogo.src = loadImage;
+    sideLogo.src = loadImage; //style image in css file - limit size
 
-    mainContent.appendChild(sideLogo);
+    //append company image to mainContent
+    container.appendChild(sideLogo);
 };
 
 //default export
