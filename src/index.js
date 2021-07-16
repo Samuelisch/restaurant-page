@@ -10,17 +10,19 @@ contentContainer.className = "container";
 mainContent.appendChild(contentContainer);
 
 //navbar for all pages
-const navbar = document.createElement('nav');
-navbar.id = 'nav-bar'
-navbar.innerHTML = `
+const navWrapper = document.createElement('div');
+navWrapper.className = 'nav-wrapper'
+navWrapper.innerHTML = `
+    <nav id="nav-bar">
         <ul id="nav-links">
             <li><button class="home tab">Home</button></li>
             <li><button class="menu tab">Menu</button></li>
             <li><button class="contact tab">Contact</button></li>
         </ul>
+    </nav>
 `
 //append to container
-contentContainer.appendChild(navbar);
+contentContainer.appendChild(navWrapper);
 
 //create div element to append to container - to be reloaded upon tab clicks
 const changingContainer = document.createElement('div');
@@ -30,7 +32,7 @@ changingContainer.className = 'module-container';
 contentContainer.appendChild(changingContainer);
 
 //initial load of homepage.js into module container
-loadContactPage(); //initiates main index.js page
+loadMenuPage(); //initiates main index.js page
 
 //module to select tabs
 (() => {

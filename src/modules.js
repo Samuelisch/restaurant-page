@@ -28,7 +28,10 @@ const loadMenuPage = () => {
     menu.id = 'menu';
 
     menu.innerHTML = `
-        <h1>Heya menu page here</h1>
+        <h1>Menu</h1>
+        <div class="menu-wrapper">
+            
+        </div>
     `;
 
     container.appendChild(menu);
