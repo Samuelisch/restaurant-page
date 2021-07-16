@@ -34,7 +34,7 @@ contentContainer.appendChild(changingContainer);
 //initial load of homepage.js into module container
 loadMenuPage(); //initiates main index.js page
 
-//module to select tabs
+//IIFE to select tabs
 (() => {
     const navBtns = document.querySelectorAll('.tab');
 
