@@ -31,10 +31,61 @@ const loadMenuPage = () => {
         <h1>Menu</h1>
         <div class="menu-wrapper">
             <div class="food appetisers">
-            </div>
-            <div class="food starters">
+                <h3>Appetisers</h3>
+                <ul>
+                    <li>
+                        Beef Satay
+                        <br/>
+                        <i class="food-desc">&emsp;Tangy, tender skewered tenderloin</i>
+                    </li>
+                    <li>
+                        Roast Beef Sliders
+                        <br/>
+                        <i class="food-desc">&emsp;Sliced from our signature prime rib</i>
+                    </li>
+                    <li>
+                        Summer Potato Salad
+                        <br/>
+                        <i class="food-desc">&emsp;Warm - with onions, chives, and onsen egg</i>
+                    </li>
+                    <li>
+                        Thick-cut Calamari Rings
+                        <br/>
+                        <i class="food-desc">&emsp;Deep-fried with traditional batter</i>
+                    </li>
+                </ul>
             </div>
             <div class="food mains">
+                <h3>Mains</h3>
+                <ul>
+                    <li>
+                        A7 Wagyu Beef Sashimi Platter
+                        <br/>
+                        <i class="food-desc">&emsp;Served with a bowl of torched wagyu beef don</i>
+                    </li>
+                    <li>
+                        Beef Taco
+                        <br/>
+                        <i class="food-desc">&emsp;Corn tortilla with slow-smoked beef brisket</i>
+                    </li>
+                    <li>
+                        Spaghetti Bolognese
+                        <br/>
+                        <i class="food-desc">&emsp;Classic dish with hand-minced beef</i>
+                    </li>
+                    <li>
+                        Signature Thick-cut Prime Rib
+                        <br/>
+                        <i class="food-desc">&emsp;Served with choice of au jus or chimichurri</i>
+                    </li>
+                    <li>
+                        Signature Angus Beef Steak
+                        <br/>
+                        <i class="food-desc">&emsp;Choice of cut: Ribeye / Sirloin / Tomahawk</i>
+                    </li>
+                </ul>
+            </div>
+            <div class="food sides">
             </div>
             <div class="food desserts">
             </div>

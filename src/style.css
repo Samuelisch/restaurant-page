@@ -28,7 +28,6 @@ body {
 	font-size: 1.3rem;
 	height: 45px;
 	width: 100%;
-	max-width: 500px;
 }
 
 #nav-links {
@@ -106,25 +105,27 @@ body {
 }
 
 /* Media queries */
-@media (min-width: 400px) {
+@media (min-width: 400px) { /* mobile devices */
 	html {
 		font-size: 13px;
 	}
 }
 
-@media (min-width: 481px) {
-	.nav-wrapper {
-		background: linear-gradient(90deg, rgb(226,129,45) 90%, rgb(224,224,224) 100%);
-	}
+@media (min-width: 481px) { /* larger devices - tablets */ 
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { /* laptops / ipad pros */
 	.nav-wrapper {
 		background: linear-gradient(90deg, rgb(226,129,45) 75%, rgb(224,224,224) 100%);
 	}
+
+	#nav-bar {
+		width: 500px;
+	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) { /* PC */
 	
 }
 
