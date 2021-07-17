@@ -32,7 +32,7 @@ changingContainer.className = 'module-container';
 contentContainer.appendChild(changingContainer);
 
 //initial load of homepage.js into module container
-loadMenuPage(); //initiates main index.js page
+loadHomePage(); //initiates main index.js page
 
 //IIFE to select tabs
 (() => {
