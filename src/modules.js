@@ -40,7 +40,6 @@ const loadMenuPage = () => {
     }
 
     menu.innerHTML = `
-        <h1>Menu</h1>
         <div class="menu-wrapper">
             <div class="food appetisers">
                 <h3>Appetisers</h3>
