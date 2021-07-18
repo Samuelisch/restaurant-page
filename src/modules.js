@@ -1,5 +1,5 @@
 //import background images here
-import loadImage from './images/default.png';
+import logo from './images/logo.png';
 import calamari from './images/calamari.jpg';
 import pudding from './images/pudding.jpg';
 import roastBeef from './images/roast-beef.jpg';
@@ -14,12 +14,17 @@ const loadHomePage = () => {
     container.innerHTML = '';
 
     //create new variable that initialises a new image
-    const sideLogo = new Image();
-    sideLogo.className = 'main-image';
-    sideLogo.src = loadImage; //style image in css file - limit size
+    const wrapper = document.createElement('div');
+    wrapper.className = 'wrapper';
+
+    wrapper.innerHTML = `
+        <div class="logo">
+            <img src="${logo}" />
+        </div>
+    `
 
     //append company image to mainContent
-    container.appendChild(sideLogo);
+    container.appendChild(wrapper);
 };
 
 const loadMenuPage = () => {
@@ -200,23 +205,53 @@ const loadContactPage = () => {
     //clear container of elements
     container.innerHTML = '';
 
+    //create wrapper for page
+    const wrapper = document.createElement('div');
+    wrapper.className = 'contact-wrapper';
+
+    const secWrapper = document.createElement('div');
+    secWrapper.className = 'contact-form-wrapper'
+
+    wrapper.innerHTML = `
+        <h1 class="contact-title">Contact us</h1>
+    `
+
     //create contents of contactPage and append to container
     const contactForm = document.createElement('form');
     contactForm.id = 'contact';
 
     contactForm.innerHTML = `
         <div class="form-inner">
-            <h1 class="contact-title">Contact us</h1>
 
-            <input type="text" placeholder="Username" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message..." rows="5"></textarea>
-
-            <button type="submit" href="/">Submit</button>
+            <input type="text" placeholder="Email" />
+            <input type="email" placeholder="Subject" />
+            <textarea placeholder="Enter your message" rows="5"></textarea>
+            <button type="submit" href="/">Send</button>
         </div>
     `;
 
-    container.appendChild(contactForm);
+    const contactDetails = document.createElement('div');
+    contactDetails.className = 'contact-details';
+
+    contactDetails.innerHTML = `
+        <div class="details">
+            <i class="fas fa-phone-alt"></i>
+            <span>+65 012 345 67</span>
+        </div>
+        <div class="details">
+            <i class="fas fa-envelope"></i>
+            <span>contact@beefboys.sg</span>
+        </div>
+        <div class="details">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>42 Singapura Rd, Singapore 623456</span>
+        </div>
+    `
+
+    secWrapper.appendChild(contactForm);
+    secWrapper.appendChild(contactDetails);
+    wrapper.appendChild(secWrapper);
+    container.appendChild(wrapper);
 }
 
 //named export for each module
