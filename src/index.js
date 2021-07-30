@@ -1,17 +1,17 @@
-import {loadHomePage, loadMenuPage, loadContactPage} from './modules.js';
-import "./style.css";
+import { loadHomePage, loadMenuPage, loadContactPage } from './modules';
+import './style.css';
 
-const mainContent = document.getElementById('content'); //selector for mainContent
+const mainContent = document.getElementById('content'); // selector for mainContent
 
-//div element to center of the page, maximum width of 80vh, with padding on top
+// div element to center of the page, maximum width of 80vh, with padding on top
 const contentContainer = document.createElement('div');
-contentContainer.className = "container";
+contentContainer.className = 'container';
 
 mainContent.appendChild(contentContainer);
 
-//navbar for all pages
+// navbar for all pages
 const navWrapper = document.createElement('div');
-navWrapper.className = 'nav-wrapper'
+navWrapper.className = 'nav-wrapper';
 navWrapper.innerHTML = `
     <nav id="nav-bar">
         <ul id="nav-links">
@@ -20,21 +20,21 @@ navWrapper.innerHTML = `
             <li><button class="contact tab">Contact</button></li>
         </ul>
     </nav>
-`
-//append to container
+`;
+// append to container
 contentContainer.appendChild(navWrapper);
 
-//create div element to append to container - to be reloaded upon tab clicks
+// create div element to append to container - to be reloaded upon tab clicks
 const changingContainer = document.createElement('div');
 changingContainer.className = 'module-container';
 
-//append module container to content
+// append module container to content
 contentContainer.appendChild(changingContainer);
 
-//initial load of homepage.js into module container
-loadHomePage(); //initiates main index.js page
+// initial load of homepage.js into module container
+loadHomePage(); // initiates main index.js page
 
-//IIFE to select tabs
+// IIFE to select tabs
 (() => {
     const navBtns = document.querySelectorAll('.tab');
 
@@ -54,5 +54,5 @@ loadHomePage(); //initiates main index.js page
         }
     }
 
-    navBtns.forEach(btn => btn.addEventListener('click', sortBtns));
+    navBtns.forEach((btn) => btn.addEventListener('click', sortBtns));
 })();

@@ -1,4 +1,4 @@
-//import background images here
+// import background images here
 import logo from './images/logo.png';
 import calamari from './images/calamari.jpg';
 import pudding from './images/pudding.jpg';
@@ -6,14 +6,14 @@ import roastBeef from './images/roast-beef.jpg';
 import sparkling from './images/sparkling.jpg';
 import squid from './images/squid.jpg';
 
-//module containing inital page-load, to be exported to index.js
+// module containing inital page-load, to be exported to index.js
 const loadHomePage = () => {
     const container = document.querySelector('.module-container');
 
-    //clear container of elements
+    // clear container of elements
     container.innerHTML = '';
 
-    //create new variable that initialises a new image
+    // create new variable that initialises a new image
     const wrapper = document.createElement('div');
     wrapper.className = 'wrapper';
 
@@ -21,25 +21,25 @@ const loadHomePage = () => {
         <div class="logo">
             <img src="${logo}" />
         </div>
-    `
+    `;
 
-    //append company image to mainContent
+    // append company image to mainContent
     container.appendChild(wrapper);
 };
 
 const loadMenuPage = () => {
     const container = document.querySelector('.module-container');
 
-    //clear container of elements
+    // clear container of elements
     container.innerHTML = '';
 
-    //create contents of contactPage and append to container
+    // create contents of contactPage and append to container
     const menu = document.createElement('div');
     menu.id = 'menu';
 
     function createImage(img) {
         const image = new Image();
-        image.className = `image`
+        image.className = 'image';
         image.src = img;
         return image;
     }
@@ -186,7 +186,7 @@ const loadMenuPage = () => {
 
     container.appendChild(menu);
 
-    //add images for menu
+    // add images for menu
     const appetiserImage = document.querySelector('.appetiser-image');
     appetiserImage.appendChild(createImage(squid));
     const mainsImage = document.querySelector('.mains-image');
@@ -197,26 +197,26 @@ const loadMenuPage = () => {
     dessertsImage.appendChild(createImage(pudding));
     const waterImage = document.querySelector('.beverages-image');
     waterImage.appendChild(createImage(sparkling));
-}
+};
 
 const loadContactPage = () => {
     const container = document.querySelector('.module-container');
 
-    //clear container of elements
+    // clear container of elements
     container.innerHTML = '';
 
-    //create wrapper for page
+    // create wrapper for page
     const wrapper = document.createElement('div');
     wrapper.className = 'contact-wrapper';
 
     const secWrapper = document.createElement('div');
-    secWrapper.className = 'contact-form-wrapper'
+    secWrapper.className = 'contact-form-wrapper';
 
     wrapper.innerHTML = `
         <h1 class="contact-title">Contact us</h1>
-    `
+    `;
 
-    //create contents of contactPage and append to container
+    // create contents of contactPage and append to container
     const contactForm = document.createElement('form');
     contactForm.id = 'contact';
 
@@ -246,13 +246,13 @@ const loadContactPage = () => {
             <i class="fas fa-map-marker-alt"></i>
             <span>42 Singapura Rd, Singapore 623456</span>
         </div>
-    `
+    `;
 
     secWrapper.appendChild(contactForm);
     secWrapper.appendChild(contactDetails);
     wrapper.appendChild(secWrapper);
     container.appendChild(wrapper);
-}
+};
 
-//named export for each module
-export {loadHomePage, loadMenuPage, loadContactPage};
+// named export for each module
+export { loadHomePage, loadMenuPage, loadContactPage };
